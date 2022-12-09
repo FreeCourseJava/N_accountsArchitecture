@@ -1,12 +1,10 @@
 package org.example.controller;
 
-import service.MakeTransactionServiceImp;
+import org.example.service.MakeTransactionServiceImp;
 
-import java.io.BufferedInputStream;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
 
-public class AccountControllerImpl implements AccountController{
+public class AccountControllerImpl implements AccountController {
     @Override
     public void receiveCommand() throws FileNotFoundException {
 //
@@ -24,7 +22,7 @@ public class AccountControllerImpl implements AccountController{
 //        sc.close();
 
         MakeTransactionServiceImp makeTransactionServiceImp = new MakeTransactionServiceImp();
-        makeTransactionServiceImp.makeTransaction("Vasja","Alexey",100d);
+        makeTransactionServiceImp.makeTransaction("Vasja", "Alexey", 100d);
 
     }
 }
